@@ -1,5 +1,5 @@
 import { _ } from "core-js";
-
+const bodyParser = require('body-parser')
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -57,7 +57,8 @@ export default {
     baseUrl: process.env.BASE_URL || 'https://nuxt-blog-75c27-default-rtdb.firebaseio.com',
     firebaseAPIKey: "AIzaSyAwYolXnH-jdFYamTNsGO_A1tC_Aeu_rRc",
     fbSignupUrl: 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=',
-    fbLoginUrl: 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key='
+    fbLoginUrl: 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=',
+    expressUrl: 'http://localhost:3000'
   },
 
   transition: {
@@ -68,4 +69,9 @@ export default {
   // router: {
   //   middleware: 'log'
   // }
+
+  serverMiddleware: [
+    bodyParser.json(),
+    '~/api'
+  ]
 }
