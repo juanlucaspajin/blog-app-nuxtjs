@@ -59,7 +59,7 @@ export default {
     firebaseAPIKey: "AIzaSyAwYolXnH-jdFYamTNsGO_A1tC_Aeu_rRc",
     fbSignupUrl: 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=',
     fbLoginUrl: 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=',
-    expressUrl: 'http://localhost:' + process.env.PORT
+    expressUrl: 'http://localhost:' + process.env.PORT || 3000
   },
 
   transition: {
